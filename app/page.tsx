@@ -15,7 +15,8 @@ export default function HomePage() {
           </div>
           <nav className="flex flex-wrap items-center gap-4 text-xs md:text-sm font-medium">
             <Link href="/" className="hover:text-emerald-200 transition font-bold">الرئيسية</Link>
-            <Link href="/smart-path" className="hover:text-emerald-200 transition">🧭 المسار الذكي والخريطة</Link>
+            <Link href="/smart-path" className="hover:text-emerald-200 transition">🧭 المسار الذكي</Link>
+            <Link href="/events" className="hover:text-emerald-200 transition text-emerald-300 font-bold">📅 الفعاليات الصحية</Link>
             <Link href="/complaints" className="hover:text-emerald-200 transition">📝 الشكاوى والمقترحات</Link>
             <Link href="/admin" className="bg-amber-400 text-slate-950 px-3 py-1.5 rounded-lg font-bold hover:bg-amber-300 transition shadow-sm">
               🔒 لوحة التحكم
@@ -36,6 +37,9 @@ export default function HomePage() {
             <Link href="/smart-path" className="bg-emerald-700 text-white px-6 py-3 rounded-xl font-bold hover:bg-emerald-800 transition shadow">
               🧭 اذهب إلى المسار الذكي والخريطة
             </Link>
+            <Link href="/events" className="bg-emerald-800 text-white px-6 py-3 rounded-xl font-bold hover:bg-emerald-900 transition shadow">
+              📅 تصفح الفعاليات الصحية
+            </Link>
             <Link href="/complaints" className="bg-slate-100 text-slate-800 px-6 py-3 rounded-xl font-bold hover:bg-slate-200 transition border border-slate-300">
               📝 تقديم شكوى أو مقترح
             </Link>
@@ -45,8 +49,8 @@ export default function HomePage() {
 
       {/* Footer */}
       <footer className="bg-slate-900 text-slate-400 py-6 text-center text-xs border-t border-slate-800 mt-20">
-  <p className="text-emerald-400 font-medium">منصة نبض العدان - رئيس العلاقات العامة</p>
-</footer>
+        <p className="text-emerald-400 font-medium">منصة نبض العدان - رئيس العلاقات العامة</p>
+      </footer>
 
     </div>
   );

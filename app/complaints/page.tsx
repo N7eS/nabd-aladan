@@ -22,17 +22,18 @@ export default function ComplaintsPage() {
   return (
     <div dir="rtl" className="min-h-screen bg-slate-50 text-slate-800 font-sans text-sm md:text-base">
       
-      {/* Header / Navbar */}
-      <header className="bg-emerald-900 text-white shadow-sm sticky top-0 z-50">
+      {/* Header / Navbar - ألوان اللوقو الكحلي */}
+      <header className="bg-blue-900 text-white shadow-md sticky top-0 z-50">
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-wrap justify-between items-center gap-3">
           <div>
             <h1 className="text-lg font-bold">نبض العدان</h1>
-            <p className="text-[10px] text-emerald-200">مستشفى العدان - الشكاوى والمقترحات</p>
+            <p className="text-[10px] text-blue-200">مستشفى العدان - الشكاوى والمقترحات</p>
           </div>
           <nav className="flex flex-wrap items-center gap-4 text-xs md:text-sm font-medium">
-            <Link href="/" className="hover:text-emerald-200 transition">الرئيسية</Link>
-            <Link href="/smart-path" className="hover:text-emerald-200 transition">🧭 المسار الذكي</Link>
-            <Link href="/complaints" className="hover:text-emerald-200 transition font-bold text-emerald-300">📝 الشكاوى والمقترحات</Link>
+            <Link href="/" className="hover:text-blue-200 transition">الرئيسية</Link>
+            <Link href="/smart-path" className="hover:text-blue-200 transition">🧭 المسار الذكي</Link>
+            <Link href="/events" className="hover:text-blue-200 transition">📅 الفعاليات الصحية</Link>
+            <Link href="/complaints" className="hover:text-blue-200 transition font-bold text-blue-200">📝 الشكاوى والمقترحات</Link>
             <Link href="/admin" className="bg-amber-400 text-slate-950 px-3 py-1.5 rounded-lg font-bold hover:bg-amber-300 transition shadow-sm">
               🔒 لوحة التحكم
             </Link>
@@ -42,10 +43,10 @@ export default function ComplaintsPage() {
 
       {/* Main Content */}
       <main className="max-w-3xl mx-auto px-4 py-8">
-        <div className="bg-white border border-slate-200 rounded-2xl p-8 space-y-6 shadow-sm">
-          <div className="border-r-4 border-emerald-700 pr-3">
+        <div className="bg-white border border-blue-100 rounded-2xl p-8 space-y-6 shadow-sm">
+          <div className="border-r-4 border-blue-900 pr-3">
             <h2 className="text-2xl font-bold text-slate-900">📝 الشكاوى والمقترحات</h2>
-            <p className="text-slate-500 text-xs mt-1">صوتكم يهمنا لتحسين الخدمات، وسيرسل النموذج مباشرة إلى بريدك الشخصي</p>
+            <p className="text-slate-500 text-xs mt-1">صوتكم يهمنا لتحسين الخدمات، وسيرسل النموذج مباشرة إلى البريد الإلكتروني</p>
           </div>
 
           <form onSubmit={handleComplaintSubmit} className="space-y-4">
@@ -56,7 +57,7 @@ export default function ComplaintsPage() {
                 placeholder="أدخل اسمك الكريم"
                 value={complaintForm.name}
                 onChange={e => setComplaintForm({ ...complaintForm, name: e.target.value })}
-                className="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-emerald-600"
+                className="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-blue-600"
                 required
               />
             </div>
@@ -67,7 +68,7 @@ export default function ComplaintsPage() {
                 placeholder="رقم الهاتف للتواصل"
                 value={complaintForm.phone}
                 onChange={e => setComplaintForm({ ...complaintForm, phone: e.target.value })}
-                className="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-emerald-600"
+                className="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-blue-600"
                 required
               />
             </div>
@@ -78,15 +79,15 @@ export default function ComplaintsPage() {
                 placeholder="اكتب تفاصيل الشكوى أو المقترح هنا..."
                 value={complaintForm.message}
                 onChange={e => setComplaintForm({ ...complaintForm, message: e.target.value })}
-                className="w-full bg-slate-50 border border-slate-300 rounded-xl p-3 text-sm focus:outline-none focus:border-emerald-600"
+                className="w-full bg-slate-50 border border-slate-300 rounded-xl p-3 text-sm focus:outline-none focus:border-blue-600"
                 required
               />
             </div>
             <button
               type="submit"
-              className="w-full bg-emerald-700 hover:bg-emerald-800 text-white font-bold py-3 rounded-xl text-sm transition shadow"
+              className="w-full bg-blue-900 hover:bg-blue-800 text-white font-bold py-3 rounded-xl text-sm transition shadow"
             >
-              إرسال الشكوى مباشرة إلى البريد (nasseralmutairy@gmail.com)
+              إرسال الشكوى مباشرة إلى البريد
             </button>
           </form>
         </div>
@@ -94,8 +95,8 @@ export default function ComplaintsPage() {
 
       {/* Footer */}
       <footer className="bg-slate-900 text-slate-400 py-6 text-center text-xs border-t border-slate-800 mt-20">
-  <p className="text-emerald-400 font-medium">منصة نبض العدان - رئيس العلاقات العامة</p>
-</footer>
+        <p className="text-blue-400 font-medium">منصة نبض العدان - رئيس العلاقات العامة</p>
+      </footer>
 
     </div>
   );

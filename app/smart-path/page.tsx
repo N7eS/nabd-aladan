@@ -38,17 +38,18 @@ export default function SmartPathPage() {
   return (
     <div dir="rtl" className="min-h-screen bg-slate-50 text-slate-800 font-sans text-sm md:text-base">
       
-      {/* Header / Navbar */}
-      <header className="bg-emerald-900 text-white shadow-sm sticky top-0 z-50">
+      {/* Header / Navbar - ألوان اللوقو الكحلي */}
+      <header className="bg-blue-900 text-white shadow-md sticky top-0 z-50">
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-wrap justify-between items-center gap-3">
           <div>
             <h1 className="text-lg font-bold">نبض العدان</h1>
-            <p className="text-[10px] text-emerald-200">مستشفى العدان - المسار الذكي</p>
+            <p className="text-[10px] text-blue-200">مستشفى العدان - المسار الذكي</p>
           </div>
           <nav className="flex flex-wrap items-center gap-4 text-xs md:text-sm font-medium">
-            <Link href="/" className="hover:text-emerald-200 transition">الرئيسية</Link>
-            <Link href="/smart-path" className="hover:text-emerald-200 transition font-bold text-emerald-300">🧭 المسار الذكي</Link>
-            <Link href="/complaints" className="hover:text-emerald-200 transition">📝 الشكاوى والمقترحات</Link>
+            <Link href="/" className="hover:text-blue-200 transition">الرئيسية</Link>
+            <Link href="/smart-path" className="hover:text-blue-200 transition font-bold text-blue-200">🧭 المسار الذكي</Link>
+            <Link href="/events" className="hover:text-blue-200 transition">📅 الفعاليات الصحية</Link>
+            <Link href="/complaints" className="hover:text-blue-200 transition">📝 الشكاوى والمقترحات</Link>
             <Link href="/admin" className="bg-amber-400 text-slate-950 px-3 py-1.5 rounded-lg font-bold hover:bg-amber-300 transition shadow-sm">
               🔒 لوحة التحكم
             </Link>
@@ -58,8 +59,8 @@ export default function SmartPathPage() {
 
       {/* Main Content */}
       <main className="max-w-5xl mx-auto px-4 py-8 space-y-6">
-        <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm space-y-4">
-          <div className="border-r-4 border-emerald-600 pr-3">
+        <div className="bg-white rounded-2xl p-6 border border-blue-100 shadow-sm space-y-4">
+          <div className="border-r-4 border-blue-900 pr-3">
             <h2 className="text-xl font-bold text-slate-900">🧭 المسار الذكي وخريطة مستشفى العدان</h2>
             <p className="text-slate-500 text-xs">اختر القسم أو المبنى المطلوب أدناه، وسيفتح لك تطبيق قوقل ماب ليوجهك إليه مباشرة</p>
           </div>
@@ -69,14 +70,14 @@ export default function SmartPathPage() {
               <div
                 key={dept.id}
                 onClick={() => handleDepartmentClick(dept.query)}
-                className="bg-slate-50 hover:bg-emerald-50 border border-slate-200 hover:border-emerald-400 p-5 rounded-xl cursor-pointer transition shadow-sm flex flex-col justify-between group"
+                className="bg-slate-50 hover:bg-blue-50/80 border border-slate-200 hover:border-blue-400 p-5 rounded-xl cursor-pointer transition shadow-sm flex flex-col justify-between group"
               >
                 <div>
                   <div className="text-3xl mb-2">{dept.icon}</div>
-                  <h3 className="font-bold text-slate-800 text-base mb-1 group-hover:text-emerald-900 transition">{dept.name}</h3>
+                  <h3 className="font-bold text-slate-800 text-base mb-1 group-hover:text-blue-900 transition">{dept.name}</h3>
                   <p className="text-xs text-slate-600">{dept.desc}</p>
                 </div>
-                <div className="mt-4 flex items-center text-xs font-bold text-emerald-700 group-hover:underline">
+                <div className="mt-4 flex items-center text-xs font-bold text-blue-800 group-hover:underline">
                   <span>📍 فتح في قوقل ماب ➔</span>
                 </div>
               </div>
@@ -86,9 +87,9 @@ export default function SmartPathPage() {
       </main>
 
       {/* Footer */}
-     <footer className="bg-slate-900 text-slate-400 py-6 text-center text-xs border-t border-slate-800 mt-20">
-  <p className="text-emerald-400 font-medium">منصة نبض العدان - رئيس العلاقات العامة</p>
-</footer>
+      <footer className="bg-slate-900 text-slate-400 py-6 text-center text-xs border-t border-slate-800 mt-20">
+        <p className="text-blue-400 font-medium">منصة نبض العدان - رئيس العلاقات العامة</p>
+      </footer>
 
     </div>
   );

@@ -16,7 +16,6 @@ export default function PublicEventsPage() {
   const [events, setEvents] = useState<HealthEvent[]>([]);
 
   useEffect(() => {
-    // جلب الفعاليات المضافة من لوحة التحكم أو البيانات الافتراضية
     const savedEvents = localStorage.getItem('hospital_events');
     if (savedEvents) {
       setEvents(JSON.parse(savedEvents));
@@ -48,17 +47,17 @@ export default function PublicEventsPage() {
     <div dir="rtl" className="min-h-screen bg-slate-50 text-slate-800 font-sans text-sm md:text-base">
       
       {/* Header / Navbar */}
-      <header className="bg-emerald-900 text-white shadow-sm sticky top-0 z-50">
+      <header className="bg-blue-900 text-white shadow-md sticky top-0 z-50">
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-wrap justify-between items-center gap-3">
           <div>
             <h1 className="text-lg font-bold">نبض العدان</h1>
-            <p className="text-[10px] text-emerald-200">مستشفى العدان - الفعاليات الصحية</p>
+            <p className="text-[10px] text-blue-200">مستشفى العدان - الفعاليات الصحية</p>
           </div>
           <nav className="flex flex-wrap items-center gap-4 text-xs md:text-sm font-medium">
-            <Link href="/" className="hover:text-emerald-200 transition">الرئيسية</Link>
-            <Link href="/smart-path" className="hover:text-emerald-200 transition">🧭 المسار الذكي</Link>
-            <Link href="/events" className="hover:text-emerald-200 transition font-bold text-emerald-300">📅 الفعاليات الصحية</Link>
-            <Link href="/complaints" className="hover:text-emerald-200 transition">📝 الشكاوى والمقترحات</Link>
+            <Link href="/" className="hover:text-blue-200 transition">الرئيسية</Link>
+            <Link href="/smart-path" className="hover:text-blue-200 transition">🧭 المسار الذكي</Link>
+            <Link href="/events" className="hover:text-blue-200 transition font-bold text-blue-200">📅 الفعاليات الصحية</Link>
+            <Link href="/complaints" className="hover:text-blue-200 transition">📝 الشكاوى والمقترحات</Link>
             <Link href="/admin" className="bg-amber-400 text-slate-950 px-3 py-1.5 rounded-lg font-bold hover:bg-amber-300 transition shadow-sm">
               🔒 لوحة التحكم
             </Link>
@@ -68,8 +67,8 @@ export default function PublicEventsPage() {
 
       {/* Main Content */}
       <main className="max-w-5xl mx-auto px-4 py-8 space-y-6">
-        <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm space-y-4">
-          <div className="border-r-4 border-emerald-600 pr-3">
+        <div className="bg-white rounded-2xl p-6 border border-blue-100 shadow-sm space-y-4">
+          <div className="border-r-4 border-blue-800 pr-3">
             <h2 className="text-xl font-bold text-slate-900">📅 الفعاليات والأيام العالمية الصحية</h2>
             <p className="text-slate-500 text-xs">تعرف على أحدث الحملات الطبية والتوعوية المقامة في مستشفى العدان</p>
           </div>
@@ -81,11 +80,11 @@ export default function PublicEventsPage() {
               events.map((ev) => (
                 <div
                   key={ev.id}
-                  className="bg-slate-50 border border-slate-200 p-6 rounded-2xl shadow-sm space-y-3 flex flex-col justify-between hover:border-emerald-400 transition"
+                  className="bg-slate-50 border border-slate-200 p-6 rounded-2xl shadow-sm space-y-3 flex flex-col justify-between hover:border-blue-500 transition"
                 >
                   <div className="space-y-2">
                     <div className="flex justify-between items-start gap-2">
-                      <span className="bg-emerald-100 text-emerald-800 text-xs font-bold px-2.5 py-1 rounded-lg">
+                      <span className="bg-blue-100 text-blue-900 text-xs font-bold px-2.5 py-1 rounded-lg">
                         {ev.department}
                       </span>
                       <span className="text-xs text-slate-500 font-mono">📅 {ev.date}</span>
@@ -105,7 +104,7 @@ export default function PublicEventsPage() {
 
       {/* Footer */}
       <footer className="bg-slate-900 text-slate-400 py-6 text-center text-xs border-t border-slate-800 mt-20">
-        <p className="text-emerald-400 font-medium">منصة نبض العدان - رئيس العلاقات العامة</p>
+        <p className="text-blue-400 font-medium">منصة نبض العدان - رئيس العلاقات العامة</p>
       </footer>
 
     </div>
